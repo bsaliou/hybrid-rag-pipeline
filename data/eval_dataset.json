@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Pourquoi utiliser le RAG plutôt que le fine-tuning ?",
+    "ground_truth": "Le fine-tuning est coûteux et doit être refait à chaque mise à jour des données car il modifie les poids du modèle. Le RAG sépare la base de connaissances du modèle, donc on peut mettre à jour les documents sans réentraîner le LLM, ce qui réduit aussi les hallucinations grâce aux sources citables."
+  },
+  {
+    "question": "Quel est le risque si un chunk est trop grand ou trop petit ?",
+    "ground_truth": "Un chunk trop grand dilue le signal pertinent parmi du bruit, tandis qu'un chunk trop petit perd le contexte nécessaire à la compréhension."
+  },
+  {
+    "question": "Pourquoi combiner retrieval dense et BM25 ?",
+    "ground_truth": "Le retrieval dense capture la similarité sémantique mais peut manquer des correspondances lexicales exactes comme des identifiants ou acronymes. BM25 excelle sur les termes exacts mais ne comprend pas les synonymes. Les combiner via une fusion de rangs permet de bénéficier des deux."
+  },
+  {
+    "question": "Pourquoi appliquer un reranker après le retrieval initial plutôt que directement sur tout le corpus ?",
+    "ground_truth": "Le cross-encoder utilisé pour le reranking traite la question et le passage ensemble, ce qui est plus précis mais plus coûteux en calcul. On l'applique donc seulement à un petit nombre de candidats déjà pré-filtrés par le retrieval initial, pas sur tout le corpus."
+  },
+  {
+    "question": "Comment mesure-t-on la fidélité (faithfulness) d'une réponse générée par un RAG ?",
+    "ground_truth": "La faithfulness mesure si chaque affirmation de la réponse générée est bien supportée par le contexte fourni, ce qui permet de détecter les hallucinations de façon quantitative."
+  }
+]
