@@ -1,9 +1,5 @@
 # RAG Portfolio — pipeline hybride avec reranking et évaluation quantifiée
 
-Un système de Retrieval-Augmented Generation complet, construit pour
-démontrer la maîtrise du pipeline de bout en bout — pas juste
-"LangChain + un PDF".
-
 📄 **[Pourquoi ces choix techniques ?](docs/DESIGN_CHOICES.md)** — la partie
 la plus importante de ce repo : la justification de chaque décision
 d'architecture (chunking sémantique, retrieval hybride, RRF, reranking,
